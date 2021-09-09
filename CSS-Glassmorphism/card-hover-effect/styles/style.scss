@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+//resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+//Base styles
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#03a9f4, #03a9f4 45%, #ffffff 45%, #ffffff 100%);
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #ffffff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 00 15px 25px rgba(0, 0, 0, 0.1);
+  .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(30px) scale(0.5);
+    transform-origin: top;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    .details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        color: #444444;
+        font-size: 1.5em;
+        font-weight: 500;
+        span {
+          font-size: 0.7em;
+          color: #03a9f4;
+          font-weight: 400;
+        }
+      }
+      .sci {
+        position: relative;
+        display: flex;
+        margin-top: 5px;
+        li {
+          list-style: none;
+          margin: 4px;
+          a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: transparent;
+            font-size: 1.25em;
+            color: #444444;
+            text-decoration: none;
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            transition: 0.5s;
+            &:hover {
+              background: #03a9f4;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
